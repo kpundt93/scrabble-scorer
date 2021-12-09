@@ -25,7 +25,7 @@ namespace Scrabble.Models
       {"Q", 10},
       {"R", 1},
       {"S", 1},
-      {"T", 1}, 
+      {"T", 1},
       {"U", 1},
       {"V", 4},
       {"W", 4},
@@ -33,5 +33,16 @@ namespace Scrabble.Models
       {"Y", 4},
       {"Z", 10}
     };
+
+    public int getScore(string word)
+    {
+      string userWord = word.ToUpper();
+      int score = 0;
+      for (int i = 0; i < userWord.Length; i++)
+      {
+        string letter = userWord[i].ToString();
+        score += wordScore[letter];
+      } return score;
+    }
   }
 }
