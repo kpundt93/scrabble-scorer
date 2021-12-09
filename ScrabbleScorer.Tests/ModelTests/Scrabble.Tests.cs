@@ -9,5 +9,10 @@ namespace Scrabble.Tests
   public class ScoreTests
   {
     [TestMethod]
+    public void Score_CreatesInstanceOfScore_WordScore()
+    {
+      Score wordScore = new Score();
+      Assert.AreEqual(typeof(Score), wordScore.GetType());
+    }
   }
 }
